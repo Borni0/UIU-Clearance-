@@ -1,0 +1,46 @@
+
+
+.appt-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.appt-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+.appt-office {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+}
+.appt-details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--ink-3);
+}
+.appt-details li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.appt-details i {
+    width: 16px;
+    color: var(--ink-5);
+}
+.appt-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+.appt-actions .btn { flex: 1; }

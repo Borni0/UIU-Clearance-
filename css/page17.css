@@ -1,0 +1,87 @@
+/* page17.css — Vice Chancellor dashboard
+   Uses theme.css for the shared shell (topbar, sidebar, page-head, card, stat, badge, btn, table).
+   This file holds VC-specific styles: filter bar, per-row department ticks, and the action layout. */
+
+.vc-filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    gap: 16px;
+    padding: 4px 4px 4px;
+}
+
+.vc-filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.vc-filter-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.vc-filter-search .input {
+    width: 100%;
+}
+
+@media (max-width: 760px) {
+    .vc-filter {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Table tweaks for the VC view: tighter columns for the per-department ticks. */
+.vc-table th,
+.vc-table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.vc-table th:first-child,
+.vc-table td:first-child,
+.vc-table th:nth-child(2),
+.vc-table td:nth-child(2),
+.vc-table th:nth-child(3),
+.vc-table td:nth-child(3),
+.vc-table th:nth-child(8),
+.vc-table td:nth-child(8) {
+    text-align: left;
+}
+
+.vc-table .th-center {
+    text-align: center;
+}
+
+.vc-table .th-mini {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-5);
+    background: var(--bg);
+    padding: 8px;
+}
+
+.vc-tick {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+}
+
+.vc-tick.ok {
+    background: var(--ok);
+}
+
+.vc-tick.no {
+    background: var(--bad);
+}
+
+.vc-loadmore {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+}

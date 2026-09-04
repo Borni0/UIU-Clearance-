@@ -1,0 +1,76 @@
+/* Student Dashboard — page-specific layout on top of theme.css */
+
+/* Action tile (5 clearance cards) */
+.action-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 12px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink);
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+.action-tile:hover {
+    border-color: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--ink);
+}
+.action-tile-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.action-tile-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 2px;
+}
+.action-tile-sub {
+    font-size: 12px;
+    color: var(--ink-5);
+}
+
+/* Quick actions list */
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.quick-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--line-3);
+    color: var(--ink-2);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+.quick-action:hover {
+    background: var(--blue-soft);
+    color: var(--blue);
+    text-decoration: none;
+}
+.quick-action i {
+    width: 18px;
+    text-align: center;
+    color: var(--ink-5);
+}
+.quick-action:hover i { color: var(--blue); }

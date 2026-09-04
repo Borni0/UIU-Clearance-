@@ -1,0 +1,29 @@
+
+
+.table-wrap {
+    overflow-x: auto;
+    margin: 0 -24px -24px;
+    padding: 0 24px 24px;
+}
+.table {
+    width: 100%;
+    min-width: 760px;
+}
+
+.docs-dots {
+    display: inline-flex;
+    gap: 5px;
+}
+.docs-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--line-2);
+}
+.docs-dots .dot.ok { background: var(--ok); }
+
+.row-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}

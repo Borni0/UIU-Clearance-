@@ -1,0 +1,78 @@
+/* track-status.css — progress bar + timeline on top of theme.css */
+
+.big-pct {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--blue);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: var(--line-3);
+    border-radius: 999px;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    background: var(--blue);
+    border-radius: 999px;
+    transition: width 0.4s;
+}
+
+.timeline {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+.step {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    position: relative;
+}
+.step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 44px;
+    bottom: -8px;
+    width: 2px;
+    background: var(--line);
+}
+.step.done:not(:last-child)::before { background: var(--blue); }
+
+.step-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--line-3);
+    color: var(--ink-5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    z-index: 1;
+}
+.step.done .step-dot {
+    background: var(--blue);
+    color: #fff;
+}
+.step.current .step-dot {
+    background: var(--warn-soft);
+    color: var(--warn);
+    box-shadow: 0 0 0 4px rgba(180, 83, 9, 0.12);
+}
+.step-body h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+}
+.step-body p {
+    font-size: 13px;
+    color: var(--ink-5);
+    margin-top: 4px;
+}
